@@ -36,22 +36,25 @@ class AccountcreationPage:
     def select_country(self):
         self.page.select_option(AccountcreationLocators.COUNTRY, "India")
 
-    def select_state(self,state):
+    def enter_state(self,state):
         self.page.locator(AccountcreationLocators.STATE).fill(state)
 
-    def select_city(self,city):
+    def enter_city(self,city):
         self.page.locator(AccountcreationLocators.CITY).fill(city)
 
     def enter_zipcode(self,zipcode):
-        self.page.loactor(AccountcreationLocators.ZIP_CODE).fill(zipcode)
+        self.page.locator(AccountcreationLocators.ZIP_CODE).fill(zipcode)
 
     def enter_mobile_number(self,mobile_number):
-        self.page.loactor(AccountcreationLocators.MOBILE_NUMBER).fill(mobile_number)
+        self.page.locator(AccountcreationLocators.MOBILE_NUMBER).fill(mobile_number)
 
     def click_create_account(self):
-        self.page.loactor(AccountcreationLocators.CREATE_ACCOUNT).click()
+        self.page.locator(AccountcreationLocators.CREATE_ACCOUNT).click()
 
     
     def get_account_created_text(self):
         return self.page.locator(AccountcreationLocators.ACCOUNT_CREATED).text_content()
+    
+    def click_continue(self):
+        self.page.locator('[data-qa="continue-button"]').click()
     
