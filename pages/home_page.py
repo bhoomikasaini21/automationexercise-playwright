@@ -13,7 +13,4 @@ class HomePage:
 
     def varify_delete_account(self):
         self.page.locator(HomeLocators.DELETE_ACCOUNT_BUTTON).click()
-        
-    def view_products(self):
-        self.page.locator(HomeLocators.PRODUCT_BUTTON).click()
 

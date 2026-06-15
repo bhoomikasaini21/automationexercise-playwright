@@ -1,13 +1,12 @@
-from pages.home_page import HomePage
-from pages.login_page import LoginPage
+from pages.products_page import ProductsPage
 
 
-def view_products(logged_in_user):
+def test_view_products(logged_in_user):
 
-    page = logged_in_user(page)
-    home = HomePage(page)
+    page = logged_in_user
+    product = ProductsPage(page)
 
-    home.view_products()
+    product.open_product()
 
     assert "products" in page.url.lower()
     

@@ -6,4 +6,4 @@ class HomeLocators:
 
     DELETE_ACCOUNT_BUTTON = "text = Delete Account"
 
-    PRODUCT_BUTTON = "text = Products"
+    CART_BUTTON = "text = Cart"
